@@ -122,3 +122,5 @@ or
 ```
 terraform destroy --auto-approve
 ```
+
+The blog for this workflow is published on [Medium](https://medium.com/@amarachi.ogu/building-a-real-time-streaming-data-pipeline-in-aws-using-terraform-87292be45455)    
