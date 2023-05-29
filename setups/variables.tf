@@ -4,7 +4,6 @@ variable "region" {
   type        = string
 }
 
-
 # Define variables for s3 bucket creation
 variable "bucket_name" {
   description = "Name of the S3 bucket"
@@ -22,16 +21,6 @@ variable "kinesis_firehose_name" {
    type        = string
   
 }
-
-# variable "firehose_destination" {
-#   description = "The prefered destination to store the data"
-#   type        = string
-# }
-
-# variable "bucket_arn" {
-#    description = "The ARN of the S3 bucket where the Kinesis Firehose will write data to"
-#    type        = string
-# }
 
 # Define variables for Lambda creation
 variable "function_name" {
@@ -71,10 +60,6 @@ variable "memory_size" {
   default     = 128
 }
 
-# variable "kinesis_data_stream_arn" {
-#   description = "The arn of the kinesis data stream"
-# }
-
 # Define variables for  API Gateway Creation
 variable "api_gateway_name" {
   description = "Name of the API Gateway"
@@ -86,21 +71,11 @@ variable "resource_name" {
   type        = string
 }
 
-# variable "lambda_function_name" {
-#   description = "Name of the Lambda function"
-#   type        = string
-# }
-
 variable "integration_http_method" {
   description = "HTTP method to use for the integration"
   type        = string
   default     = "POST"
 }
-
-# variable "lambda_function_invoke_arn" {
-#   description = "URI of the Lambda function"
-#   type        = string
-# }
 
 variable "stage_name" {
   description = "The Gateway deployment name"
