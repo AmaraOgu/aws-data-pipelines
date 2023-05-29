@@ -1,4 +1,4 @@
-# Creates an S3 bucket for storing raw data
+# Creates an S3 bucket for storing the processed data
 module "data-s3-bucket" {
   source      = "../modules/s3"
   bucket_name = var.bucket_name
@@ -25,6 +25,7 @@ module "lamda_function" {
   memory_size             = var.memory_size
   source_bucket           = var.source_bucket
   kinesis_data_stream_arn = module.kinesis.kinesis_data_stream_arn
+
   depends_on              = [ module.kinesis ]
 }
 
